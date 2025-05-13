@@ -1,0 +1,27 @@
+# Python environment
+.env
+poetry.lock
+__pycache__/
+.venv/
+env/
+venv/
+*.pyc
+
+# Streamlit
+.streamlit/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+=2.100.0
+*~
+log/
+*.log
+
+# Logs
+*.log
+
+# Ignore data directories
+data/
