@@ -23,8 +23,8 @@ The project consists of the following main components:
     * Manages the Langchain agent.
     * Processes user messages.
     * Retrieves the chat history.
-* **`ai_service/agents/search_agent.py`:** This file defines the Langchain agent and its tools (e.g., Google Search).
-* **`ai_service/memories/chat_memory.py`**: This file sets up the type of memory used. Currently uses `ConversationBufferMemory`.
+* **`ai_service/agents/search_agent.py`:** This file defines the Langchain agent and its tools.
+* **`ai_service/memories/chat_memory.py`**: This file sets up the type of memory used. Currently uses `ConversationBufferWindowMemory`.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ Before running the application, ensure you have the following:
 * **Python 3.11:** The project is developed using Python 3.11.
 * **Poetry:** Poetry is used for managing dependencies.  Install it from [https://python-poetry.org/](https://python-poetry.org/).
 * **OpenAI API Key:** You'll need an OpenAI API key to use the GPT language model.  Obtain one from [https://openai.com/](https://openai.com/).
-* **Google Search API Key (Optional):** If you want to use Google Search, you'll need a Google Cloud account and set up the Custom Search API.
+* **Google Search API Key :** You'll need a Google Cloud account and set up the Custom Search API.
 
 ## Setup
 
@@ -55,10 +55,10 @@ Before running the application, ensure you have the following:
     Create a `.env` file in the project root and add your API keys:
     ```
     OPENAI_API_KEY=<your_openai_api_key>
-    #GOOGLE_API_KEY=<your_google_api_key> # Optional
-    #GOOGLE_CSE_ID=<your_google_cse_id>     # Optional
+    #GOOGLE_API_KEY=<your_google_api_key> 
+    #GOOGLE_CSE_ID=<your_google_cse_id>    
     ```
-    Replace the placeholder values with your actual API keys.  The Google Search API keys are optional if you don't intend to use the search functionality.
+    Replace the placeholder values with your actual API keys.
 
 ## Running the Application
 
